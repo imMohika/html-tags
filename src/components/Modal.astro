@@ -1,0 +1,50 @@
+---
+---
+
+<div
+  class="w-screen h-screen absolute bg-black/50 backdrop-blur-lg top-0 left-0 z-10 flex justify-center items-center hidden"
+  id="modal"
+>
+  <div class="w-1/2 h-2/3 flex flex-col px-4 gap-2 py-8 bg-gray-800">
+    <div class="flex justify-between w-full">
+      <p id="modal-tag" class="text-white font-bold font-mono text-3xl"></p>
+      <button id="modal-close" >
+        <p class="text-white px-2 border-white border-2 border-solid block">X</p></button>
+    </div>
+    <div id="modal-description" class="text-white text-lg"></div>
+  </div>
+</div>
+
+<script>
+import { elementDescriptions } from "./element";
+
+  const elements = document.querySelectorAll("[data-element]");
+  const modal = document.getElementById("modal");
+  const closeBtn = document.getElementById("modal-close");
+  const modalTag = document.getElementById("modal-tag");
+  const modalDescription = document.getElementById("modal-description")
+
+  const numnum = () => {
+    if (!modal || !closeBtn || !modalTag || !modalDescription) return;
+    elements.forEach((element) => {
+      element.addEventListener("click", () => {
+        const title = element.getAttribute("data-element");
+        if (title) {
+          modalTag.innerText = title;
+          // @ts-ignore
+          modalDescription.innerHTML = elementDescriptions[title] ?? "TODO";
+          modal.classList.remove("hidden");
+        }
+      });
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.classList.add("hidden");
+      });
+    }
+  };
+
+  numnum()
+</script>

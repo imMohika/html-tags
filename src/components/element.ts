@@ -29,6 +29,7 @@ export const groupTitle: GroupObject = {
   interactive: "Interactive",
   "web-components": "Web components",
 };
+
 export const groupColor: GroupObject = {
   root: "#100f26",
   metadata: "#bf7eb4",
@@ -43,4 +44,7 @@ export const groupColor: GroupObject = {
   form: "#72a2d1",
   interactive: "#d27fbe",
   "web-components": "#a109ac",
+};
+
+export const elementDescriptions = {
 };
