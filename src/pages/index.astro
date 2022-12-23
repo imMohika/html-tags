@@ -8,60 +8,60 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="HTML Tags">
   <div class="flex justify-center items-end">
     <Col>
-      <Element title="html" group="root" />
-      <Element title="body" group="root" />
+      <Element title="html" group="root" star/>
+      <Element title="body" group="root" star/>
 
+      <Element title="head" group="metadata" star/>
       <Element title="base" group="metadata" />
-      <Element title="head" group="metadata" />
-      <Element title="link" group="metadata" />
-      <Element title="meta" group="metadata" />
-      <Element title="style" group="metadata" />
-      <Element title="title" group="metadata" />
+      <Element title="link" group="metadata" star/>
+      <Element title="meta" group="metadata" star/>
+      <Element title="style" group="metadata" star/>
+      <Element title="title" group="metadata" star/>
     </Col>
 
     <Col>
-      <Element title="header" group="content-sectioning" />
-      <Element title="address" group="content-sectioning" />
+      <Element title="header" group="content-sectioning" star/>
+      <Element title="main" group="content-sectioning" star/>
+      <Element title="nav" group="content-sectioning" star/>
+      <Element title="section" group="content-sectioning" star/>
       <Element title="article" group="content-sectioning" />
       <Element title="aside" group="content-sectioning" />
-      <Element title="main" group="content-sectioning" />
-      <Element title="nav" group="content-sectioning" />
-      <Element title="section" group="content-sectioning" />
+      <Element title="address" group="content-sectioning" />
     </Col>
 
     <Col>
-      <Element title="h1" group="content-sectioning" />
-      <Element title="h2" group="content-sectioning" />
+      <Element title="h1" group="content-sectioning" star/>
+      <Element title="h2" group="content-sectioning" star/>
       <Element title="h3" group="content-sectioning" />
       <Element title="h4" group="content-sectioning" />
       <Element title="h5" group="content-sectioning" />
       <Element title="h6" group="content-sectioning" />
-      <Element title="footer" group="content-sectioning" />
+      <Element title="footer" group="content-sectioning" star/>
     </Col>
 
     <Col>
+      <Element title="div" group="text-content" star/>
       <Element title="blockquote" group="text-content" />
       <Element title="dd" group="text-content" />
-      <Element title="div" group="text-content" />
       <Element title="dl" group="text-content" />
       <Element title="dt" group="text-content" />
-      <Element title="figcaption" group="text-content" />
       <Element title="figure" group="text-content" />
+      <Element title="figcaption" group="text-content" />
     </Col>
 
     <Col>
-      <Element title="hr" group="text-content" />
-      <Element title="li" group="text-content" />
+      <Element title="ul" group="text-content" star/>
+      <Element title="ol" group="text-content" star/>
+      <Element title="li" group="text-content" star/>
       <Element title="menu" group="text-content" />
-      <Element title="ol" group="text-content" />
-      <Element title="p" group="text-content" />
+      <Element title="p" group="text-content" star/>
       <Element title="pre" group="text-content" />
-      <Element title="ul" group="text-content" />
+      <Element title="hr" group="text-content" />
     </Col>
 
     <Col>
-      <Element title="a" group="inline-text" />
-      <Element title="abbr" group="inline-text" />
+      <Element title="a" group="inline-text" star/>
+      <Element title="span" group="inline-text" star/>
       <Element title="b" group="inline-text" />
       <Element title="bdi" group="inline-text" />
       <Element title="bdo" group="inline-text" />
@@ -87,12 +87,12 @@ import Layout from "../layouts/Layout.astro";
       <Element title="s" group="inline-text" />
       <Element title="samp" group="inline-text" />
       <Element title="small" group="inline-text" />
-      <Element title="span" group="inline-text" />
       <Element title="strong" group="inline-text" />
       <Element title="sub" group="inline-text" />
+      <Element title="abbr" group="inline-text" />
     </Col>
     <Col>
-      <Element title="script" group="scripting" />
+      <Element title="script" group="scripting" star/>
       <Element title="sup" group="inline-text" />
       <Element title="time" group="inline-text" />
       <Element title="u" group="inline-text" />
@@ -112,62 +112,62 @@ import Layout from "../layouts/Layout.astro";
       <Element title="noscript" group="scripting" />
       <Element title="portal" group="embed" />
       <Element title="source" group="embed" />
-      <Element title="svg" group="embed" />
+      <Element title="svg" group="embed"/>
       <Element title="math" group="embed" />
 
       <Element title="audio" group="multimedia" />
     </Col>
     <Col>
       <Element title="del" group="demarcating-edits" />
-      <Element title="caption" group="table" />
-      <Element title="col" group="table" />
-      <Element title="colgroup" group="table" />
       <Element title="table" group="table" />
+      <Element title="col" group="table" />
+      <Element title="thead" group="table" />
       <Element title="tbody" group="table" />
-      <Element title="img" group="multimedia" />
+      <Element title="tfoot" group="table" />
+      <Element title="img" group="multimedia" star/>
     </Col>
     <Col>
       <Element title="ins" group="demarcating-edits" />
+      <Element title="colgroup" group="table" />
+      <Element title="caption" group="table" />
       <Element title="td" group="table" />
-      <Element title="tfoot" group="table" />
       <Element title="th" group="table" />
-      <Element title="thead" group="table" />
       <Element title="tr" group="table" />
       <Element title="map" group="multimedia" />
     </Col>
     <Col>
-      <Element title="button" group="form" />
+      <Element title="form" group="form" />
+      <Element title="input" group="form" star/>
+      <Element title="button" group="form" star/>
+      <Element title="label" group="form" star/>
       <Element title="datalist" group="form" />
       <Element title="fieldset" group="form" />
-      <Element title="form" group="form" />
-      <Element title="input" group="form" />
-      <Element title="label" group="form" />
       <Element title="legend" group="form" />
       <Element title="track" group="multimedia" />
     </Col>
     <Col>
-      <Element title="meter" group="form" />
+      <Element title="select" group="form" star/>
+      <Element title="textarea" group="form"/>
+      <Element title="option" group="form" star/>
       <Element title="optgroup" group="form" />
-      <Element title="option" group="form" />
+      <Element title="meter" group="form" />
       <Element title="output" group="form" />
       <Element title="progress" group="form" />
-      <Element title="select" group="form" />
-      <Element title="textarea" group="form" />
       <Element title="video" group="multimedia" />
     </Col>
   </div>
   <div class="flex mt-2 justify-between width-full">
-		<div class="flex-1">
-<Groups />
-		</div>
-		<div class="flex">
-			<Element title="details" group="interactive" />
-			<Element title="dialog" group="interactive" />
-			<Element title="summary" group="interactive" />
-			
-			<Element title="slot" group="web-components" />
-			<Element title="template" group="web-components" />
-		</div>
+    <div class="flex-1">
+      <Groups />
+    </div>
+    <div class="flex">
+      <Element title="details" group="interactive" />
+      <Element title="dialog" group="interactive" />
+      <Element title="summary" group="interactive" />
+
+      <Element title="slot" group="web-components" />
+      <Element title="template" group="web-components" />
+    </div>
   </div>
 </Layout>
 

@@ -34,7 +34,7 @@ export const groupColor: GroupObject = {
   metadata: "#bf7eb4",
   "content-sectioning": "#842c6f",
   "text-content": "#fe2d0c",
-  "inline-text": "#20c1e5",
+  "inline-text": "#18a8c9",
   multimedia: "#0a72e2",
   embed: "#df3b83",
   scripting: "#5d2586",
