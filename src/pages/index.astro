@@ -1,81 +1,174 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Col from "../components/Col.astro";
+import Element from "../components/Element.astro";
+import Groups from "../components/Groups.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="HTML Tags">
+  <div class="flex justify-center items-end">
+    <Col>
+      <Element title="html" group="root" />
+      <Element title="body" group="root" />
+
+      <Element title="base" group="metadata" />
+      <Element title="head" group="metadata" />
+      <Element title="link" group="metadata" />
+      <Element title="meta" group="metadata" />
+      <Element title="style" group="metadata" />
+      <Element title="title" group="metadata" />
+    </Col>
+
+    <Col>
+      <Element title="header" group="content-sectioning" />
+      <Element title="address" group="content-sectioning" />
+      <Element title="article" group="content-sectioning" />
+      <Element title="aside" group="content-sectioning" />
+      <Element title="main" group="content-sectioning" />
+      <Element title="nav" group="content-sectioning" />
+      <Element title="section" group="content-sectioning" />
+    </Col>
+
+    <Col>
+      <Element title="h1" group="content-sectioning" />
+      <Element title="h2" group="content-sectioning" />
+      <Element title="h3" group="content-sectioning" />
+      <Element title="h4" group="content-sectioning" />
+      <Element title="h5" group="content-sectioning" />
+      <Element title="h6" group="content-sectioning" />
+      <Element title="footer" group="content-sectioning" />
+    </Col>
+
+    <Col>
+      <Element title="blockquote" group="text-content" />
+      <Element title="dd" group="text-content" />
+      <Element title="div" group="text-content" />
+      <Element title="dl" group="text-content" />
+      <Element title="dt" group="text-content" />
+      <Element title="figcaption" group="text-content" />
+      <Element title="figure" group="text-content" />
+    </Col>
+
+    <Col>
+      <Element title="hr" group="text-content" />
+      <Element title="li" group="text-content" />
+      <Element title="menu" group="text-content" />
+      <Element title="ol" group="text-content" />
+      <Element title="p" group="text-content" />
+      <Element title="pre" group="text-content" />
+      <Element title="ul" group="text-content" />
+    </Col>
+
+    <Col>
+      <Element title="a" group="inline-text" />
+      <Element title="abbr" group="inline-text" />
+      <Element title="b" group="inline-text" />
+      <Element title="bdi" group="inline-text" />
+      <Element title="bdo" group="inline-text" />
+      <Element title="br" group="inline-text" />
+    </Col>
+    <Col>
+      <Element title="cite" group="inline-text" />
+      <Element title="code" group="inline-text" />
+      <Element title="data" group="inline-text" />
+      <Element title="dfn" group="inline-text" />
+      <Element title="em" group="inline-text" />
+      <Element title="i" group="inline-text" />
+    </Col>
+    <Col>
+      <Element title="kbd" group="inline-text" />
+      <Element title="mark" group="inline-text" />
+      <Element title="q" group="inline-text" />
+      <Element title="rp" group="inline-text" />
+      <Element title="rt" group="inline-text" />
+      <Element title="ruby" group="inline-text" />
+    </Col>
+    <Col>
+      <Element title="s" group="inline-text" />
+      <Element title="samp" group="inline-text" />
+      <Element title="small" group="inline-text" />
+      <Element title="span" group="inline-text" />
+      <Element title="strong" group="inline-text" />
+      <Element title="sub" group="inline-text" />
+    </Col>
+    <Col>
+      <Element title="script" group="scripting" />
+      <Element title="sup" group="inline-text" />
+      <Element title="time" group="inline-text" />
+      <Element title="u" group="inline-text" />
+      <Element title="var" group="inline-text" />
+      <Element title="wbr" group="inline-text" />
+    </Col>
+
+    <Col>
+      <Element title="canvas" group="scripting" />
+      <Element title="embed" group="embed" />
+      <Element title="iframe" group="embed" />
+      <Element title="object" group="embed" />
+      <Element title="picture" group="embed" />
+      <Element title="area" group="multimedia" />
+    </Col>
+    <Col>
+      <Element title="noscript" group="scripting" />
+      <Element title="portal" group="embed" />
+      <Element title="source" group="embed" />
+      <Element title="svg" group="embed" />
+      <Element title="math" group="embed" />
+
+      <Element title="audio" group="multimedia" />
+    </Col>
+    <Col>
+      <Element title="del" group="demarcating-edits" />
+      <Element title="caption" group="table" />
+      <Element title="col" group="table" />
+      <Element title="colgroup" group="table" />
+      <Element title="table" group="table" />
+      <Element title="tbody" group="table" />
+      <Element title="img" group="multimedia" />
+    </Col>
+    <Col>
+      <Element title="ins" group="demarcating-edits" />
+      <Element title="td" group="table" />
+      <Element title="tfoot" group="table" />
+      <Element title="th" group="table" />
+      <Element title="thead" group="table" />
+      <Element title="tr" group="table" />
+      <Element title="map" group="multimedia" />
+    </Col>
+    <Col>
+      <Element title="button" group="form" />
+      <Element title="datalist" group="form" />
+      <Element title="fieldset" group="form" />
+      <Element title="form" group="form" />
+      <Element title="input" group="form" />
+      <Element title="label" group="form" />
+      <Element title="legend" group="form" />
+      <Element title="track" group="multimedia" />
+    </Col>
+    <Col>
+      <Element title="meter" group="form" />
+      <Element title="optgroup" group="form" />
+      <Element title="option" group="form" />
+      <Element title="output" group="form" />
+      <Element title="progress" group="form" />
+      <Element title="select" group="form" />
+      <Element title="textarea" group="form" />
+      <Element title="video" group="multimedia" />
+    </Col>
+  </div>
+  <div class="flex mt-2 justify-between width-full">
+		<div class="flex-1">
+<Groups />
+		</div>
+		<div class="flex">
+			<Element title="details" group="interactive" />
+			<Element title="dialog" group="interactive" />
+			<Element title="summary" group="interactive" />
+			
+			<Element title="slot" group="web-components" />
+			<Element title="template" group="web-components" />
+		</div>
+  </div>
 </Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+<style></style>

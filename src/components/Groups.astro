@@ -1,0 +1,18 @@
+---
+import { Group,groupColor,groupTitle } from './element';
+---
+
+<ul class="flex flex-col h-12 flex-wrap">
+  {Object.entries(groupTitle).map(([k,v]) => {
+    return (
+      <li class="flex gap-1 items-center">
+        <span class="w-3 h-3" style={{
+          backgroundColor: groupColor[k as Group]
+        }} />
+        <p class="text-white font-mono">
+          {v}
+          </p>
+        </li>
+        )
+  })}
+</ul>
